@@ -2,11 +2,16 @@
   "name": "lastfm-export-journals",
   "version": "0.0.1",
   "description": "Export a Last.fm user's journals",
-  "scripts": {},
+  "scripts": {
+    "lint": "standard"
+  },
   "keywords": [
     "lastfm",
     "export"
   ],
   "author": "David Singleton",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^8.6.0"
+  }
 }
