@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "cheerio": "^0.22.0",
+    "slug": "^0.9.1",
     "to-markdown": "^3.0.3"
   },
   "standard": {

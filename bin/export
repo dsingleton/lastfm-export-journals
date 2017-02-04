@@ -1,6 +1,10 @@
 #! /usr/bin/env node
 
 const request = require('request')
+const slug = require('slug')
+const path = require('path')
+const fs = require('fs')
+
 const parser = require('../lib/parser')
 const formatter = require('../lib/formatter')
 
@@ -15,10 +19,27 @@ if (!dest) {
 
 const url = `http://www.last.fm/user/${username}/journal`
 
+const filename = journal => {
+  return [
+    journal.date.toISOString().split('T')[0],
+    slug(journal.title, { lower: true })
+  ].join('-')
+}
+
+const filepath = journal => {
+  return path.format({
+    dir: dest,
+    name: filename(journal),
+    ext: '.md'
+  })
+}
+
 request(url, function (error, response, body) {
-  if (!error && response.statusCode === 200) {
-    parser(body).map(journal => {
-      console.log(formatter(journal))
-    })
+  if (error || response.statusCode !== 200) {
+    console.log(`Error fetching ${url}, error: ${error}`)
   }
+
+  parser(body).map(journal => {
+    fs.writeFileSync(filepath(journal), formatter(journal))
+  })
 })
