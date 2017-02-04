@@ -1,5 +1,5 @@
 var assert = require('assert')
-var parser = require('../parser')
+var parser = require('../lib/parser')
 
 describe('parser', function () {
   let input = `

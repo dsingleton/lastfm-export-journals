@@ -1,5 +1,5 @@
 var assert = require('assert')
-var formatter = require('../formatter')
+var formatter = require('../lib/formatter')
 
 describe('formatter', function () {
   const journal = {
