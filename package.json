@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Export a Last.fm user's journals",
   "scripts": {
+    "test": "mocha",
     "lint": "standard"
   },
   "keywords": [
@@ -12,6 +13,16 @@
   "author": "David Singleton",
   "license": "MIT",
   "devDependencies": {
+    "mocha": "^3.2.0",
     "standard": "^8.6.0"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
   }
 }
