@@ -10,7 +10,7 @@ describe('parser', function () {
           14 Jul 2008, 22:46
         </p>
         <div class="entry-content">
-          <div class="bbcode">I do &lt;3 machine tags. If tag are web 2.0 <em>glue</em> (urghh), then they're most definitely <strong>super glue</strong>.<br><br>There are just under 100,000 photos on Flickr that are tagged with Last.fm event machine-tags. This is great because users can just tag their flickr photos rather than having to upload gig photos to us too. I'd rather we stuck to what we're good at, music.<br><br>As of today Flickr now link back to our event pages, hurrah!</div>
+          <div class="bbcode">I do &lt;3 machine tags. If tag are web 2.0 <em>glue</em> (urghh), then they're most definitely <strong>super glue</strong>.<br><br>There are just under 100,000 photos on Flickr that are tagged with Last.fm event machine-tags. This is great because users can just tag their flickr photos rather than having to upload gig photos to us too. I'd rather we stuck to what we're good at, music.<br><br>As of today <span>Flickr</span> now link back to our event pages, hurrah!</div>
         </div>
         <div class="journalFooter">
           <span class="space"><a href="/user/underpangs/journal/2008/07/14/22hx6f_flickr_machine_tag_cross-link.">Read more</a></span>
@@ -31,7 +31,7 @@ describe('parser', function () {
   })
 
   it('should allow custom body formatter', function () {
-    const body = "I do &lt;3 machine tags. If tag are web 2.0 <em>glue</em> (urghh), then they're most definitely <strong>super glue</strong>.<br><br>There are just under 100,000 photos on Flickr that are tagged with Last.fm event machine-tags. This is great because users can just tag their flickr photos rather than having to upload gig photos to us too. I'd rather we stuck to what we're good at, music.<br><br>As of today Flickr now link back to our event pages, hurrah!".toUpperCase()
+    const body = "I do &lt;3 machine tags. If tag are web 2.0 <em>glue</em> (urghh), then they're most definitely <strong>super glue</strong>.<br><br>There are just under 100,000 photos on Flickr that are tagged with Last.fm event machine-tags. This is great because users can just tag their flickr photos rather than having to upload gig photos to us too. I'd rather we stuck to what we're good at, music.<br><br>As of today <span>Flickr</span> now link back to our event pages, hurrah!".toUpperCase()
     const bodyFormatter = body => body.toUpperCase()
 
     assert.equal(parser(input, bodyFormatter)[0].body, body)

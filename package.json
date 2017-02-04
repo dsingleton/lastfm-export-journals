@@ -17,7 +17,8 @@
     "standard": "^8.6.0"
   },
   "dependencies": {
-    "cheerio": "^0.22.0"
+    "cheerio": "^0.22.0",
+    "to-markdown": "^3.0.3"
   },
   "standard": {
     "globals": [
