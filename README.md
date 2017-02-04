@@ -9,9 +9,13 @@ Export the journal's of a Last.fm user.
 
 For example `./bin/export underpangs journals` would export the journals for the user `underpangs` to the relative directory `journals`.
 
-## Output
+### Output
 
 Output is one markdown file per journal entry, named by date + journal slug and storing metadata in [frontmatter](https://jekyllrb.com/docs/frontmatter/).
+
+### Installation
+
+Use [`yarn`](https://www.npmjs.com/package/yarn) over `npm` for installation, if you can.
 
 ## Last.fm Journals
 
