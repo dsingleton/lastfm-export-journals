@@ -1,4 +1,4 @@
-# Last.fm journal exporter
+# Last.fm journal exporter ![](https://travis-ci.org/dsingleton/lastfm-export-journals.svg?branch=master) [![](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Export the journal's of a Last.fm user.
 

@@ -1,15 +1,19 @@
 {
   "name": "lastfm-export-journals",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Export a Last.fm user's journals",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha && standard",
     "lint": "standard"
   },
   "keywords": [
     "lastfm",
     "export"
   ],
+  "repository": {
+    "url": "https://github.com/dsingleton/lastfm-export-journals",
+    "type": "git"
+  },
   "author": "David Singleton",
   "license": "MIT",
   "devDependencies": {
