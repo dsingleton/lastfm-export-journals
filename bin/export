@@ -12,9 +12,13 @@ let [, , username, dest] = process.argv
 if (!username) throw new Error('Missing username argument')
 if (!dest) dest = '.'
 
-const url = `http://www.last.fm/user/${username}/journal`
+const url = `http://${username}.deviantart.com/journal/`
+const headers = {
+  // DeviantArt requires a user agent, or times the request out
+  'User-Agent': 'node-js-request'
+}
 
-request(url, function (error, response, body) {
+request({ url, headers }, function (error, response, body) {
   if (error || response.statusCode !== 200) {
     console.log(`Error fetching ${url}, error: ${error}`)
   }
