@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 
-const request = require('request')
 const fs = require('fs')
 
+const fetcher = require('../lib/fetcher')
 const parser = require('../lib/parser')
 const formatter = require('../lib/formatter')
 const filepath = require('../lib/filepath')
@@ -14,11 +14,10 @@ if (!dest) dest = '.'
 
 const url = `http://www.last.fm/user/${username}/journal`
 
-request(url, function (error, response, body) {
+fetcher(url, (error, response, body) => {
   if (error || response.statusCode !== 200) {
-    console.log(`Error fetching ${url}, error: ${error}`)
+    return console.log(`Error fetching ${url}, error: ${error}`)
   }
-
   parser(body).map(journal => {
     fs.writeFileSync(filepath(dest, journal), formatter(journal))
   })

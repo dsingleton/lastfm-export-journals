@@ -32,7 +32,10 @@
   "standard": {
     "globals": [
       "describe",
-      "it"
+      "it",
+      "xit",
+      "before",
+      "after"
     ]
   }
 }
