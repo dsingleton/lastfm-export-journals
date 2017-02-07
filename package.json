@@ -1,6 +1,6 @@
 {
   "name": "lastfm-export-journals",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Export a Last.fm user's journals",
   "scripts": {
     "test": "mocha && standard",
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "cheerio": "^0.22.0",
+    "request": "^2.79.0",
     "slug": "^0.9.1",
     "to-markdown": "^3.0.3"
   },
