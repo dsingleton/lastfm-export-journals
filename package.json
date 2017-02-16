@@ -6,6 +6,9 @@
     "test": "mocha && standard",
     "lint": "standard"
   },
+  "engines": {
+    "nodejs": ">=6.0.0"
+  },
   "keywords": [
     "lastfm",
     "export"
