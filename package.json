@@ -1,6 +1,6 @@
 {
   "name": "lastfm-export-journals",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Export a Last.fm user's journals",
   "scripts": {
     "test": "mocha && standard",
@@ -9,6 +9,7 @@
   "engines": {
     "nodejs": ">=6.0.0"
   },
+  "bin": "./bin/export",
   "keywords": [
     "lastfm",
     "export"

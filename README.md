@@ -1,21 +1,30 @@
 # Last.fm journal exporter ![](https://travis-ci.org/dsingleton/lastfm-export-journals.svg?branch=master) [![](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-Export the journal's of a Last.fm user.
+Export the journals for a Last.fm user, in structured markdown format.
 
 ## Usage
+
+Install the package globally and it will add the `lastfm-export-journals` command.
+
 ```sh
-./bin/export [username] [destination]
+npm install -g lastfm-export-journals
 ```
 
-For example `./bin/export underpangs journals` would export the journals for the user `underpangs` to the relative directory `journals`.
+Call the command with the username to export and the directory to write output to:
+
+```sh
+lastfm-export-journals [username] [destination]
+```
+
+For example `lastfm-export-journals underpangs ~/journals` for the user `underpangs`, writing the output to `~/journals`.
 
 ### Output
 
 Output is one markdown file per journal entry, named by date + journal slug and storing metadata in [frontmatter](https://jekyllrb.com/docs/frontmatter/).
 
-### Installation
+## Contributing
 
-Use [`yarn`](https://www.npmjs.com/package/yarn) over `npm` for installation, if you can.
+Contribution is welcome! Clone the repo, install it's dependencies with [`yarn`](https://www.npmjs.com/package/yarn), create a feature branch, open a Pull Request again my version.
 
 ## Last.fm Journals
 
