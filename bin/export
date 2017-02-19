@@ -2,10 +2,10 @@
 
 const fs = require('fs')
 
-const fetcher = require('../lib/fetcher')
-const parser = require('../lib/parser')
-const formatter = require('../lib/formatter')
-const filepath = require('../lib/filepath')
+const fetcher = require('../lib').fetcher
+const parser = require('../lib').parser
+const formatter = require('../lib').formatter
+const filepath = require('../lib').filepath
 
 let [, , username, dest] = process.argv
 

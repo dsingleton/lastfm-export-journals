@@ -9,6 +9,7 @@
   "engines": {
     "nodejs": ">=6.0.0"
   },
+  "main": "lib/index.js",
   "bin": "./bin/export",
   "keywords": [
     "lastfm",
