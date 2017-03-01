@@ -4,7 +4,9 @@
   "description": "Export a Last.fm user's journals",
   "scripts": {
     "test": "mocha && standard",
-    "lint": "standard"
+    "lint": "standard",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "nodejs": ">=6.0.0"
@@ -29,7 +31,8 @@
     "cheerio": "^0.22.0",
     "request": "^2.79.0",
     "slug": "^0.9.1",
-    "to-markdown": "^3.0.3"
+    "to-markdown": "^3.0.3",
+    "snyk": "^1.25.1"
   },
   "standard": {
     "globals": [
@@ -39,5 +42,6 @@
       "before",
       "after"
     ]
-  }
+  },
+  "snyk": true
 }
