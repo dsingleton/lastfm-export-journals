@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "cheerio": "^0.22.0",
-    "request": "^2.79.0",
+    "request": "^2.87.0",
     "slug": "^0.9.1",
     "to-markdown": "^3.0.3"
   },
